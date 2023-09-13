@@ -68,6 +68,16 @@
         <td>3-5 hours</td>
     </tr>
 </table>
-
+<hr>
+<h2>Code Displaying</h2>
+<blockquote>How do you strip the unit from any number in SASS?</blockquote>
+<a href="https://stackoverflow.com/questions/12328259/how-do-you-strip-the-unit-from-any-number-in-sass">Stack Overflow link</a>
+<pre>@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+  
+    @return $number;
+  }</pre>
 </body>
 </html>
